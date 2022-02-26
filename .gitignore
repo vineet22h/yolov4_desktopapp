@@ -1,4 +1,3 @@
 __pycache__/
 tf_yolov4_model/
 img/
-deploy_kub.yaml

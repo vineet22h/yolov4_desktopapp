@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo
+spec:
+  selector:
+    matchLabels:
+      app: yolo
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: yolo
+    spec:
+      hostNetwork: true
+      containers:
+      - name: yolo
+        image: vineet22h/yolov4_desktopapp
+        volumes:
+        - $HOME/.Xauthority:/home/developer/.Xauthority:rw
+        environment:
+        - DISPLAY=unix$DISPLAY
+        volumeMounts:
+        - mountPath: /dev/video0
+
+# ---
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: yolo-service
+# spec:
+#   selector:
+#     app: yolo
+#   ports:
+#   - protocol: TCP
+#     port: 80
+#     targetPort: 80
+#   type: LoadBalancer

@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 from utils import draw_bbox, get_detection_data, preprocess_img
 
@@ -23,19 +22,12 @@ def predict(raw_img):
               show_text=True, show_img=False)
     return output_img
 
-def video(model):
-    vid = cv2.VideoCapture(0)
-    while(True):
-        ret, frame = vid.read()
-        pred = predict(frame) 
-        cv2.imshow('frame', pred)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-    vid.release()
-    cv2.destroyAllWindows()
-
-# raw_img = cv2.imread('img/test.jpg')[:, :, ::-1]
-# output_img = predict(raw_img)
-# plt.imshow(output_img)
-
-video(model)
+vid = cv2.VideoCapture(0)
+while(True):
+    ret, frame = vid.read()
+    pred = predict(frame) 
+    cv2.imshow('frame', pred)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+vid.release()
+cv2.destroyAllWindows()
