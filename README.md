@@ -10,11 +10,16 @@ Pretrained yolov4 model can be downloaded here:<br>
 https://drive.google.com/drive/folders/1hMW_cmxAPmJOGV-1EPz1OB98Qwmpe6f4?usp=sharing <br>
 
 # DockerHub Image
-Dockerized image can be pulled using:<br>
+Docker pull command:<br>
 `docker pull vineet22h/yolov4_desktopapp:latest`
 
-Run docker container on ubuntu using:<br>
-`sudo docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
+Docker run command:<br>
+`docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
 `
+
+# Kubernetes
+Kuberenetes command :
+`kubectl create -f deploy.yaml`
+
 # References 
 https://github.com/taipingeric/yolo-v4-tf.keras
