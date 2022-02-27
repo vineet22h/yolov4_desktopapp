@@ -15,7 +15,7 @@ Docker pull command:<br>
 
 Docker run command:<br>
 1. `xhost +` <br>
-`docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
+2. `docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
 `<br>
 
 # Kubernetes
