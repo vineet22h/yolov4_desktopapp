@@ -8,3 +8,6 @@ https://drive.google.com/drive/folders/1hMW_cmxAPmJOGV-1EPz1OB98Qwmpe6f4?usp=sha
 
 # DockerHub Image
 docker pull vineet22h/yolov4_desktopapp:latest
+
+# References 
+https://github.com/taipingeric/yolo-v4-tf.keras
