@@ -11,7 +11,7 @@ https://drive.google.com/drive/folders/1hMW_cmxAPmJOGV-1EPz1OB98Qwmpe6f4?usp=sha
 
 # DockerHub Image
 Dockerized image can be pulled using:<br>
-docker pull vineet22h/yolov4_desktopapp:latest<br>
+`docker pull vineet22h/yolov4_desktopapp:latest<br>`
 To run Sage:
     docker run -it sagemath/sagemath
 
