@@ -14,11 +14,12 @@ Docker pull command:<br>
 `docker pull vineet22h/yolov4_desktopapp:latest`
 
 Docker run command:<br>
+`xhost +`
 `docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
 `
 
 # Kubernetes
-Kuberenetes command :
+Kuberenetes run command: <br>
 `kubectl create -f deploy.yaml`
 
 # References 
