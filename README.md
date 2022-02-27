@@ -11,12 +11,10 @@ https://drive.google.com/drive/folders/1hMW_cmxAPmJOGV-1EPz1OB98Qwmpe6f4?usp=sha
 
 # DockerHub Image
 Dockerized image can be pulled using:<br>
-`docker pull vineet22h/yolov4_desktopapp:latest<br>`
-To run Sage:
-    docker run -it sagemath/sagemath
+`docker pull vineet22h/yolov4_desktopapp:latest`
 
 Run docker container on ubuntu using:<br>
-sudo docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
-
+`sudo docker run --rm --net=host -e DISPLAY=$DISPLAY --volume="$HOME/.Xauthority:/home/root/.Xauthority:rw" --device /dev/video0 vineet22h/yolov4_desktopapp
+`
 # References 
 https://github.com/taipingeric/yolo-v4-tf.keras
